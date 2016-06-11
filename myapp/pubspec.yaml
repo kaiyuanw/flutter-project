@@ -1,0 +1,13 @@
+name: myapp
+description: A new flutter project.
+dependencies:
+  flutter:
+    path: ../../fork/flutter/packages/flutter
+dev_dependencies:
+  test: '>=0.12.0'
+  flutter_test:
+    path: ../../fork/flutter/packages/flutter_test
+  flutter_driver:
+    path: ../../fork/flutter/packages/flutter_driver
+  firebase:
+    git: "git@github.com:flutter/firebase-dart.git"

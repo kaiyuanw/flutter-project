@@ -1,0 +1,11 @@
+name: multi_counter
+description: A multiple counter application that run on multiple devices.
+dependencies:
+  flutter:
+    path: ../../fork/flutter/packages/flutter
+  flutter_test:
+    path: ../../fork/flutter/packages/flutter_test
+  flutter_driver:
+    path: ../../fork/flutter/packages/flutter_driver
+  firebase:
+    git: "git@github.com:flutter/firebase-dart.git"
