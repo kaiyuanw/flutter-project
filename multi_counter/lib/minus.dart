@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase/firebase.dart';
+import 'keys.dart';
 
 void main() {
   runApp(
@@ -57,9 +58,10 @@ class _MultiCounterState extends State<MultiCounter> {
         title: new Text('Multi Counter')
       ),
       body: new Center(
-        child: new Text('Button tapped $_counter time${ _counter == 1 ? '' : 's' }.')
+        child: new Text('Button tapped $_counter time${ _counter == 1 ? '' : 's' }.', key: new ValueKey(textKey))
       ),
       floatingActionButton: new FloatingActionButton(
+        key: new ValueKey(buttonKey),
         onPressed: _decreaseCounter,
         tooltip: 'Decrement',
         child: new Icon(
