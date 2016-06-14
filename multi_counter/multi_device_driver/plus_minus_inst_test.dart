@@ -25,17 +25,21 @@ void main() {
     test('tap', () async {
       for(int i = 0; i < 5; i++) {
         await driver1.tap(find.byValueKey(buttonKey));
-        await new Future<Null>.delayed(new Duration(milliseconds: 500));
+        await new Future<Null>.delayed(new Duration(milliseconds: 2000));
       }
-      // String result1 = await driver1.getText(find.byValueKey(textKey));
-      // expect(result1, equals('Button tapped 5 times.'));
+      String result1 = await driver1.getText(find.byValueKey(textKey));
+      expect(result1, equals('Button tapped 5 times.'));
+      String result2 = await driver2.getText(find.byValueKey(textKey));
+      expect(result2, equals('Button tapped 5 times.'));
       // await new Future<Null>.delayed(new Duration(milliseconds: 10000));
       for(int i = 0; i < 3; i++) {
         await driver2.tap(find.byValueKey(buttonKey));
-        await new Future<Null>.delayed(new Duration(milliseconds: 500));
+        await new Future<Null>.delayed(new Duration(milliseconds: 2000));
       }
-      // String result2 = await driver2.getText(find.byValueKey(textKey));
-      // expect(result2, equals('Button tapped 3 times.'));
+      result1 = await driver1.getText(find.byValueKey(textKey));
+      expect(result1, equals('Button tapped 2 times.'));
+      result2 = await driver2.getText(find.byValueKey(textKey));
+      expect(result2, equals('Button tapped 2 times.'));
     });
   });
 }
