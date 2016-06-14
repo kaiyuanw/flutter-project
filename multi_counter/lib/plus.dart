@@ -53,12 +53,17 @@ class _MultiCounterState extends State<MultiCounter> {
 
   @override
   Widget build(BuildContext context) {
+    final TextTheme textTheme = Theme.of(context).textTheme;
     return new Scaffold(
       appBar: new AppBar(
         title: new Text('Multi Counter')
       ),
       body: new Center(
-        child: new Text('Button tapped $_counter time${ _counter == 1 ? '' : 's' }.', key: new ValueKey(textKey))
+        child: new Text(
+          'Button tapped $_counter time${ _counter == 1 ? '' : 's' }.',
+          style: textTheme.display3,
+          key: new ValueKey(textKey)
+        )
       ),
       floatingActionButton: new FloatingActionButton(
         key: new ValueKey(buttonKey),
