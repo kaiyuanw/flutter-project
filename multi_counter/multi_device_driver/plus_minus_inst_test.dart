@@ -9,8 +9,10 @@ void main() {
     FlutterDriver driver2;
 
     setUpAll(() async {
-      driver1 = await FlutterDriver.connect(dartVmServiceUrl: 'http://localhost:8185');
-      driver2 = await FlutterDriver.connect(dartVmServiceUrl: 'http://localhost:8186');
+      driver1 = await FlutterDriver.connectByDeviceNickname(deviceNickname: 'Alice');
+      driver2 = await FlutterDriver.connectByDeviceNickname(deviceNickname: 'Bob');
+      // driver1 = await FlutterDriver.connect(dartVmServiceUrl: 'http://localhost:8185');
+      // driver2 = await FlutterDriver.connect(dartVmServiceUrl: 'http://localhost:8186');
     });
 
     tearDownAll(() async {
