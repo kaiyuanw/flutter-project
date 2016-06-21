@@ -1,0 +1,4 @@
+name: minus_app
+uses-material-design: true
+services:
+  - firebase

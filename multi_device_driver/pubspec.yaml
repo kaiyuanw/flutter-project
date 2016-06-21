@@ -1,0 +1,9 @@
+name: multi_device_driver
+description: A mult-device test package that holds test script.
+dependencies:
+  flutter:
+    path: ../../fork/flutter/packages/flutter
+  flutter_test:
+    path: ../../fork/flutter/packages/flutter_test
+  flutter_driver:
+    path: ../../fork/flutter/packages/flutter_driver
