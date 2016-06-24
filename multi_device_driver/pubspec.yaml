@@ -5,5 +5,5 @@ dependencies:
     path: ../../fork/flutter/packages/flutter
   flutter_test:
     path: ../../fork/flutter/packages/flutter_test
-  flutter_driver:
-    path: ../../fork/flutter/packages/flutter_driver
+  mdtest:
+    path: ../../../vanadium/release/projects/baku/mdtest

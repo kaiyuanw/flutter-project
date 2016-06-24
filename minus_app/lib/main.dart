@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:firebase/firebase.dart';
+import 'package:flutter_driver/driver_extension.dart';
 import 'keys.dart';
 
 void main() {
+  // enableFlutterDriverExtension();
   runApp(
     new MaterialApp(
       title: 'Multi-Counter',

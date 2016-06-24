@@ -1,5 +1,6 @@
 import 'package:flutter_driver/flutter_driver.dart';
 import 'package:test/test.dart';
+import 'package:mdtest/src/driver/driver_util.dart';
 import 'dart:async';
 import 'keys.dart';
 
@@ -9,10 +10,10 @@ void main() {
     FlutterDriver driver2;
 
     setUpAll(() async {
-      driver1 = await FlutterDriver.connectByDeviceNickname(deviceNickname: 'Alice');
-      driver2 = await FlutterDriver.connectByDeviceNickname(deviceNickname: 'Bob');
-      // driver1 = await FlutterDriver.connect(dartVmServiceUrl: 'http://localhost:8185');
-      // driver2 = await FlutterDriver.connect(dartVmServiceUrl: 'http://localhost:8186');
+      driver1 = await DriverUtil.connectByName(deviceNickname: 'Alice');
+      driver2 = await DriverUtil.connectByName(deviceNickname: 'Bob');
+      // driver1 = await FlutterDriver.connect(dartVmServiceUrl: 'http://localhost:8106');
+      // driver2 = await FlutterDriver.connect(dartVmServiceUrl: 'http://localhost:8108');
     });
 
     tearDownAll(() async {
