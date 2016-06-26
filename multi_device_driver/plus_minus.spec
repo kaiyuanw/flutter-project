@@ -2,7 +2,7 @@
   "test-path": "plus_minus_inst_test.dart",
   "devices": {
     "Alice": {
-      "device-id": "HT591JT00305",
+      "device-id": "HT4AEJT00178",
       "model-name": "Nexus 9",
       "app-root": "../plus_app",
       "app-path": "../plus_app/test_driver/plus_inst.dart"

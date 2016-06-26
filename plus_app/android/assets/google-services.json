@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "432540221915",
-    "firebase_url": "https://my-multi-module-app.firebaseio.com",
-    "project_id": "my-multi-module-app",
-    "storage_bucket": "my-multi-module-app.appspot.com"
+    "project_number": "869892248309",
+    "firebase_url": "https://my-multi-module-project.firebaseio.com",
+    "project_id": "my-multi-module-project",
+    "storage_bucket": "my-multi-module-project.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:432540221915:android:b9df02b7e2949fe1",
+        "mobilesdk_app_id": "1:869892248309:android:b9df02b7e2949fe1",
         "android_client_info": {
           "package_name": "com.google.plusApp"
         }
       },
       "oauth_client": [
         {
-          "client_id": "432540221915-ifmd9abaacsh7ad06cu8ps52jsdbd6qm.apps.googleusercontent.com",
+          "client_id": "869892248309-8pe7d4p4guvrb6ut64lmhfnssqjd8jb0.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.google.plusApp",
@@ -23,13 +23,13 @@
           }
         },
         {
-          "client_id": "432540221915-42h30alepj5med58q4g42n4qa4sh1f8u.apps.googleusercontent.com",
+          "client_id": "869892248309-6klh0h2q4q9puft9cf86clccsmj6ucrm.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDzKKn0bjFa_m6ikKjHRIeVfi0eHAlrnyI"
+          "current_key": "AIzaSyC4Atyc7KP_VkPi_XYdRHBeWmOzcuJ0G8w"
         }
       ],
       "services": {
@@ -40,7 +40,7 @@
           "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "432540221915-42h30alepj5med58q4g42n4qa4sh1f8u.apps.googleusercontent.com",
+              "client_id": "869892248309-6klh0h2q4q9puft9cf86clccsmj6ucrm.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
