@@ -1,11 +1,11 @@
 name: minus_app
-description: A new flutter project.
+description: A minus flutter project.
 dependencies:
   flutter:
-    path: ../../fork/flutter/packages/flutter
+    path: ../../../vanadium/release/projects/baku/deps/flutter/packages/flutter
   flutter_test:
-    path: ../../fork/flutter/packages/flutter_test
+    path: ../../../vanadium/release/projects/baku/deps/flutter/packages/flutter_test
   flutter_driver:
-    path: ../../fork/flutter/packages/flutter_driver
+    path: ../../../vanadium/release/projects/baku/deps/flutter/packages/flutter_driver
   firebase:
     git: "git@github.com:flutter/firebase-dart.git"
