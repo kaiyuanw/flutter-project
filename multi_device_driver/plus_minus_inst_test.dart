@@ -10,8 +10,8 @@ void main() {
     FlutterDriver driver2;
 
     setUpAll(() async {
-      driver1 = await DriverUtil.connectByName(deviceNickname: 'Alice');
-      driver2 = await DriverUtil.connectByName(deviceNickname: 'Bob');
+      driver1 = await DriverUtil.connectByName('Alice');
+      driver2 = await DriverUtil.connectByName('Bob');
       // driver1 = await FlutterDriver.connect(dartVmServiceUrl: 'http://localhost:8106');
       // driver2 = await FlutterDriver.connect(dartVmServiceUrl: 'http://localhost:8108');
     });
@@ -26,6 +26,7 @@ void main() {
     });
 
     test('tap', () async {
+      await new Future<Null>.delayed(new Duration(milliseconds: 3000));
       for(int i = 0; i < 5; i++) {
         await driver1.tap(find.byValueKey(buttonKey));
         await new Future<Null>.delayed(new Duration(milliseconds: 2000));
@@ -35,14 +36,14 @@ void main() {
       String result2 = await driver2.getText(find.byValueKey(textKey));
       expect(result2, equals('Button tapped 5 times.'));
       // await new Future<Null>.delayed(new Duration(milliseconds: 10000));
-      for(int i = 0; i < 3; i++) {
+      for(int i = 0; i < 5; i++) {
         await driver2.tap(find.byValueKey(buttonKey));
         await new Future<Null>.delayed(new Duration(milliseconds: 2000));
       }
       result1 = await driver1.getText(find.byValueKey(textKey));
-      expect(result1, equals('Button tapped 2 times.'));
+      expect(result1, equals('Button tapped 0 times.'));
       result2 = await driver2.getText(find.byValueKey(textKey));
-      expect(result2, equals('Button tapped 2 times.'));
+      expect(result2, equals('Button tapped 0 times.'));
     });
   });
 }
