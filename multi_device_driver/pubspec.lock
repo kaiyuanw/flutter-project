@@ -6,7 +6,7 @@ packages:
       name: analyzer
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.27.4-alpha.9"
+    version: "0.27.4-alpha.14"
   args:
     description:
       name: args
@@ -54,7 +54,7 @@ packages:
       name: crypto
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.9.2"
+    version: "2.0.1"
   csslib:
     description:
       name: csslib
@@ -69,19 +69,19 @@ packages:
     version: "0.1.0"
   flutter:
     description:
-      path: "../../fork/flutter/packages/flutter"
+      path: "../../../vanadium/release/projects/baku/deps/flutter/packages/flutter"
       relative: true
     source: path
     version: "0.0.21"
   flutter_driver:
     description:
-      path: "../../fork/flutter/packages/flutter_driver"
+      path: "../../../vanadium/release/projects/baku/deps/flutter/packages/flutter_driver"
       relative: true
     source: path
     version: "0.0.1"
   flutter_test:
     description:
-      path: "../../fork/flutter/packages/flutter_test"
+      path: "../../../vanadium/release/projects/baku/deps/flutter/packages/flutter_test"
       relative: true
     source: path
     version: "0.0.0"
@@ -156,19 +156,19 @@ packages:
       name: mojo
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.4.23"
+    version: "0.4.20"
   mojo_sdk:
     description:
       name: mojo_sdk
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.2.27"
+    version: "0.2.24"
   mojo_services:
     description:
       name: mojo_services
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.4.30"
+    version: "0.4.27"
   package_config:
     description:
       name: package_config
@@ -231,13 +231,13 @@ packages:
     version: "0.2.1"
   sky_engine:
     description:
-      path: "../../fork/flutter/bin/cache/pkg/sky_engine"
+      path: "../../../vanadium/release/projects/baku/deps/flutter/bin/cache/pkg/sky_engine"
       relative: true
     source: path
     version: "0.0.99"
   sky_services:
     description:
-      path: "../../fork/flutter/bin/cache/pkg/sky_services"
+      path: "../../../vanadium/release/projects/baku/deps/flutter/bin/cache/pkg/sky_services"
       relative: true
     source: path
     version: "0.0.99"
@@ -282,7 +282,7 @@ packages:
       name: test
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.12.13+4"
+    version: "0.12.13+5"
   typed_data:
     description:
       name: typed_data
@@ -325,4 +325,4 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.1.9"
-sdk: ">=1.16.0 <1.18.0"
+sdk: ">=1.16.0 <1.19.0"

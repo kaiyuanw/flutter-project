@@ -2,8 +2,8 @@ name: multi_device_driver
 description: A mult-device test package that holds test script.
 dependencies:
   flutter:
-    path: ../../fork/flutter/packages/flutter
+    path: ../../../vanadium/release/projects/baku/deps/flutter/packages/flutter
   flutter_test:
-    path: ../../fork/flutter/packages/flutter_test
+    path: ../../../vanadium/release/projects/baku/deps/flutter/packages/flutter_test
   mdtest:
     path: ../../../vanadium/release/projects/baku/mdtest
