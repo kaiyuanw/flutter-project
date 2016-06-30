@@ -8,4 +8,4 @@ dependencies:
   flutter_driver:
     path: ../../../vanadium/release/projects/baku/deps/flutter/packages/flutter_driver
   firebase:
-    path: ../../fork/flutterfire
+    path: ../../fork/firebase-dart
