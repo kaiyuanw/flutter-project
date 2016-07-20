@@ -1,11 +1,18 @@
+import 'dart:async';
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
-import 'package:firebase/firebase.dart';
+import 'package:flutter/http.dart' as http;
+
 import 'keys.dart';
+
+const String getCounterUrl = 'http://shared-counter.appspot.com/get_count';
+const String increaseCounterUrl = 'http://shared-counter.appspot.com/inc_count';
 
 void main() {
   runApp(
     new MaterialApp(
-      title: 'Multi-Counter',
+      title: 'Decrease Counter',
       theme: new ThemeData(
         primarySwatch: Colors.blue
       ),
@@ -23,16 +30,32 @@ class MultiCounter extends StatefulWidget {
 
 class _MultiCounterState extends State<MultiCounter> {
   int _counter = 0;
-  DatabaseReference _counterReference = FirebaseDatabase.instance.reference();
 
   @override
   void initState() {
     super.initState();
-    FirebaseAuth.instance.signInAnonymously().then((user) {
-      _counterReference.onChildAdded.listen((Event event) {
-        var val = event.snapshot.val();
-        updateCounter(val['counter']);
-      });
+    listenToGetCounter();
+  }
+
+  Future<Null> listenToGetCounter() async {
+    while (true) {
+      pingUrl(getCounterUrl);
+      await new Future<Null>.delayed(new Duration(milliseconds: 500));
+    }
+  }
+
+  void pingUrl(String url) {
+    http.get(url).then((http.Response response) {
+      String json = response.body;
+      if (json == null) {
+        print("Failed to get count from $url");
+        return;
+      }
+      JsonDecoder decoder = new JsonDecoder();
+      dynamic obj = decoder.convert(json);
+      if (_counter != obj['count']) {
+        updateCounter(obj['count']);
+      }
     });
   }
 
@@ -44,11 +67,8 @@ class _MultiCounterState extends State<MultiCounter> {
 
   void _decreaseCounter() {
     setState(() {
-      _counter--;
-      // _counterReference.child('counter').set({ 'counter' : _counter });
-      _counterReference.push().set({ 'counter': _counter });
+      pingUrl(increaseCounterUrl);
     });
-
   }
 
   @override

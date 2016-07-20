@@ -1,0 +1,7 @@
+coverage
+pubspec.lock
+build
+.pub
+packages
+.packages
+*.log
