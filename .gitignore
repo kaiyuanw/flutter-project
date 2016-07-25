@@ -1,6 +1,6 @@
 .DS_Store
 
-coverage
+code_coverage
 pubspec.lock
 build
 .pub
