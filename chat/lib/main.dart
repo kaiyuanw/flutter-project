@@ -19,7 +19,7 @@ void start(String name, int color) {
     new MaterialApp(
       title: 'Chat Demo',
       theme: new ThemeData(
-        primarySwatch: Colors.accents[myColor],
+        primarySwatch: Colors.primaries[myColor],
         accentColor: Colors.orangeAccent[400]
       ),
       home: new ChatScreen()
@@ -104,14 +104,21 @@ class ChatScreenState extends State<ChatScreen> {
 
   void postMessage(ChatMessage message) {
     ChatUser user = message.sender;
-    Map<String, String> headers = {'Content-type': 'application/json', 'Accept': 'application/json'};
+    Map<String, String> headers = {
+      'Content-type': 'application/json',
+      'Accept': 'application/json'
+    };
     Map<String, String> body = <String, String>{
       'user': user.name,
       'color': '${user.color}',
       'text': message.text
     };
 
-    http.post(setMessageUrl, headers: headers, body: JSON.encode(body)).then((http.Response response) {
+    http.post(
+      setMessageUrl,
+      headers: headers,
+      body: JSON.encode(body)
+    ).then((http.Response response) {
       String json = response.body;
       if (json == null) {
         print('Fail to post $message to $setMessageUrl');
@@ -132,24 +139,27 @@ class ChatScreenState extends State<ChatScreen> {
       }
       JsonDecoder decoder = new JsonDecoder();
       dynamic result = decoder.convert(json);
-      List<ChatMessage> history = new List.from(result['history'].map((message) {
-        return new ChatMessage(
-          sender: new ChatUser(
-            name: message['user'],
-            color: int.parse(message['color'])
-          ),
-          text: message['text'],
-          animationController: new AnimationController(
-            duration: new Duration(milliseconds: 700)
-          )
-        );
-      }));
+      List<ChatMessage> history = new List.from(
+        result['history'].map(
+          (message) {
+            return new ChatMessage(
+              sender: new ChatUser(
+                name: message['user'],
+                color: int.parse(message['color'])
+              ),
+              text: message['text'],
+              animationController: new AnimationController(
+                duration: new Duration(milliseconds: 700)
+              )
+            );
+          }
+        )
+      );
       if (_messages.length > history.length) {
         print('Local messages size is greater than the remote messages size!');
         setState(() {
           _messages.clear();
         });
-        // return;
       }
       if (_messages.length == history.length) {
         return;
@@ -160,33 +170,6 @@ class ChatScreenState extends State<ChatScreen> {
         });
         history[i].animationController.forward();
       }
-      // print('messages: $_messages');
-      // print('history: $history');
-      // if (const ListEquality().equals(_messages, history)) {
-      //   return;
-      // }
-      // setState(() {
-      //   _messages = history;
-      // });
-      // for (ChatMessage message in _messages) {
-      //   message.animationController.forward();
-      // }
-
-      // int startIdx = -1;
-      // for (int i = 0; i < history.length; i++) {
-      //   if (history[i] != _messages[i]) {
-      //     startIdx = i;
-      //     break;
-      //   }
-      // }
-      // if (startIdx != -1) {
-      //   for (int i = startIdx; i < history.length; i++) {
-      //     setState(() {
-      //       _messages.add(history[i]);
-      //     });
-      //     history[i].animationController.forward();
-      //   }
-      // }
     });
   }
 
@@ -201,10 +184,6 @@ class ChatScreenState extends State<ChatScreen> {
       animationController: animationController
     );
     postMessage(message);
-    // setState(() {
-    //   _messages.add(message);
-    // });
-    // animationController.forward();
   }
 
   void _handleMessageChanged(InputValue value) {
