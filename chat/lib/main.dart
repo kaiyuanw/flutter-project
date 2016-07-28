@@ -19,7 +19,7 @@ void start(String name, int color) {
     new MaterialApp(
       title: 'Chat Demo',
       theme: new ThemeData(
-        primarySwatch: Colors.purple,
+        primarySwatch: Colors.accents[myColor],
         accentColor: Colors.orangeAccent[400]
       ),
       home: new ChatScreen()
