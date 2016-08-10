@@ -6,8 +6,8 @@ import 'package:flutter/http.dart' as http;
 
 import 'keys.dart';
 
-const String setMessageUrl = 'http://flutter-chat.appspot.com/set_message';
-const String getHistoryUrl = 'http://flutter-chat.appspot.com/get_history';
+const String setMessageUrl = 'http://baku-flutter-chat.appspot.com/set_message';
+const String getHistoryUrl = 'http://baku-flutter-chat.appspot.com/get_history';
 
 String myname;
 int myColor;

@@ -7,7 +7,7 @@ import 'package:mdtest/driver_util.dart';
 
 import '../lib/keys.dart';
 
-const String clearHistoryUrl = 'http://flutter-chat.appspot.com/clear_history';
+const String clearHistoryUrl = 'http://baku-flutter-chat.appspot.com/clear_history';
 
 Future<Null> clearChatHistory() async {
   HttpClient client = new HttpClient();

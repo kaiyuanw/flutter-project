@@ -7,8 +7,8 @@ import 'package:flutter/material.dart';
 
 import 'keys.dart';
 
-const String getCounterUrl = 'http://shared-counter.appspot.com/get_count';
-const String decreaseCounterUrl = 'http://shared-counter.appspot.com/dec_count';
+const String getCounterUrl = 'http://baku-shared-counter.appspot.com/get_count';
+const String decreaseCounterUrl = 'http://baku-shared-counter.appspot.com/dec_count';
 
 void main() {
   runApp(

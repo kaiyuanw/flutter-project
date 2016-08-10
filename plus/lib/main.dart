@@ -7,8 +7,8 @@ import 'dart:io';
 
 import 'keys.dart';
 
-const String getCounterUrl = 'http://shared-counter.appspot.com/get_count';
-const String increaseCounterUrl = 'http://shared-counter.appspot.com/inc_count';
+const String getCounterUrl = 'http://baku-shared-counter.appspot.com/get_count';
+const String increaseCounterUrl = 'http://baku-shared-counter.appspot.com/inc_count';
 
 void main() {
   runApp(
