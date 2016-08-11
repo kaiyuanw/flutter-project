@@ -3,7 +3,7 @@ import 'dart:io';
 
 import 'package:flutter_driver/flutter_driver.dart';
 import 'package:test/test.dart';
-import 'package:mdtest/driver_util.dart';
+import 'package:mdtest_api/driver_util.dart';
 
 import '../lib/keys.dart';
 

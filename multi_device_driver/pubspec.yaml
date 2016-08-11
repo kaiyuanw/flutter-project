@@ -5,8 +5,8 @@ dependencies:
     path: ../../../vanadium/release/projects/baku/deps/flutter/packages/flutter
   flutter_test:
     path: ../../../vanadium/release/projects/baku/deps/flutter/packages/flutter_test
-  mdtest:
-    path: ../../../vanadium/release/projects/baku/mdtest
+  mdtest_api:
+    path: ../../../vanadium/release/projects/baku/mdtest/dart-packages/mdtest_api
 
 dev_dependencies:
   test: 0.12.15+1

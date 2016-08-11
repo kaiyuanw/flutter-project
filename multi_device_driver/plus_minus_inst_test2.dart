@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter_driver/flutter_driver.dart';
 import 'package:test/test.dart';
-import 'package:mdtest/driver_util.dart';
+import 'package:mdtest_api/driver_util.dart';
 
 import 'keys.dart';
 import 'utils.dart' as utils;
